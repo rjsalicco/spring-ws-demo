@@ -1,0 +1,20 @@
+# .jar Files #
+##############
+**.jar
+
+# .class Files #
+################
+**.class
+
+# build dir #
+#############
+/build
+/target
+
+# misc Files #
+##################
+.settings*
+test.log
+test.properties
+test.script
+test.tmp

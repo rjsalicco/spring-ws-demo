@@ -6,7 +6,7 @@
 //
 
 
-package org.axiomaticit.model;
+package com.axiomaticit.model;
 
 import java.util.ArrayList;
 import java.util.List;

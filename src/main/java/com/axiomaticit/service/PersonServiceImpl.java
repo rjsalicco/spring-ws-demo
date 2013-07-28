@@ -1,10 +1,11 @@
-package org.axiomaticit.service;
+package com.axiomaticit.service;
 
 import java.util.HashSet;
 import java.util.Set;
 
-import org.axiomaticit.model.Person;
 import org.springframework.stereotype.Component;
+
+import com.axiomaticit.model.Person;
 
 @Component("personService")
 public class PersonServiceImpl implements PersonService {

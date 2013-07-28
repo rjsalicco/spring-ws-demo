@@ -11,14 +11,14 @@
                            http://www.springframework.org/schema/web-services 
                            http://www.springframework.org/schema/web-services/web-services-2.0.xsd">
 
-	<context:component-scan base-package="org.axiomaticit" />
+	<context:component-scan base-package="com.axiomaticit" />
 
 	<sws:annotation-driven/>
 
 	<sws:dynamic-wsdl id="person"                                                           
 	    portTypeName="Person"                                                         
 	    locationUri="/personService/"                                                       
-	    targetNamespace="http://axiomaticit.org/model">                               
+	    targetNamespace="http://axiomaticit.com/model">                               
 	  <sws:xsd location="classpath:/person.xsd"/>                                                  
 	</sws:dynamic-wsdl>
 
@@ -29,6 +29,6 @@
 	</bean>
 
 	<bean id="marshaller" class="org.springframework.oxm.jaxb.Jaxb2Marshaller"
-		p:contextPath="org.axiomaticit.model" />
+		p:contextPath="com.axiomaticit.model" />
 
 </beans>

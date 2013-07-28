@@ -1,17 +1,18 @@
-package org.axiomaticit.endpoint;
+package com.axiomaticit.endpoint;
 
 import java.util.List;
 import java.util.Set;
 
-import org.axiomaticit.model.FindPersonsRequest;
-import org.axiomaticit.model.FindPersonsResponse;
-import org.axiomaticit.model.Person;
-import org.axiomaticit.service.PersonService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.ws.server.endpoint.annotation.Endpoint;
 import org.springframework.ws.server.endpoint.annotation.PayloadRoot;
 import org.springframework.ws.server.endpoint.annotation.RequestPayload;
 import org.springframework.ws.server.endpoint.annotation.ResponsePayload;
+
+import com.axiomaticit.model.FindPersonsRequest;
+import com.axiomaticit.model.FindPersonsResponse;
+import com.axiomaticit.model.Person;
+import com.axiomaticit.service.PersonService;
 
 @Endpoint
 public class PersonEndpoint {

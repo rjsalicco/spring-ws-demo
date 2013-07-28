@@ -1,8 +1,8 @@
-package org.axiomaticit.service;
+package com.axiomaticit.service;
 
 import java.util.Set;
 
-import org.axiomaticit.model.Person;
+import com.axiomaticit.model.Person;
 
 public interface PersonService {
 

@@ -1,5 +1,5 @@
-<xsd:schema xmlns="http://www.axiomaticit.org/model"
-	targetNamespace="http://www.axiomaticit.org/model"
+<xsd:schema xmlns="http://www.axiomaticit.com/model"
+	targetNamespace="http://www.axiomaticit.com/model"
 	xmlns:xsd="http://www.w3.org/2001/XMLSchema">
 
 	<xsd:element name="findPersonsRequest">

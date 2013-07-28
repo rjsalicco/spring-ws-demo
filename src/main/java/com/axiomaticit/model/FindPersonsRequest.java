@@ -6,7 +6,7 @@
 //
 
 
-package org.axiomaticit.model;
+package com.axiomaticit.model;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;

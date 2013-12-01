@@ -1,6 +1,8 @@
 package com.axiomaticit.service;
 
+import java.util.ArrayList;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 
 import org.springframework.stereotype.Component;
@@ -11,7 +13,7 @@ import com.axiomaticit.model.Person;
 public class PersonServiceImpl implements PersonService {
 
 	@Override
-	public Set<Person> findPersons(String name) {
+	public List<Person> findPersons(String name) {
 		
 		Person person1 = new Person();
 		person1.setId(1);
@@ -25,10 +27,13 @@ public class PersonServiceImpl implements PersonService {
 		person2.setLastName("Salicco");
 		person2.setEmailAddress("rj.salicco@yahoo.com");
 		
-		Set<Person> personsSet = new HashSet<Person>();
-		personsSet.add(person1);
-		personsSet.add(person2);
+		Set<Person> personSet = new HashSet<Person>();
+		personSet.add(person1);
+		personSet.add(person2);
 		
-		return personsSet;
+		List<Person> personList = new ArrayList<Person>();
+		personList.addAll(personSet);
+		
+		return personList;
 	}
 }

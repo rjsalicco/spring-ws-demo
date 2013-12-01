@@ -13,18 +13,28 @@
 	<xsd:element name="findPersonsResponse">
 		<xsd:complexType>
 			<xsd:sequence>
-				<xsd:element name="persons" type="person" minOccurs="0" maxOccurs="unbounded" />
+				<xsd:element ref="persons" minOccurs="1" maxOccurs="1" />
 			</xsd:sequence>
 		</xsd:complexType>
 	</xsd:element>
 
-	<xsd:complexType name="person">
-		<xsd:sequence>
-			<xsd:element name="id" type="xsd:int" />
-			<xsd:element name="firstName" type="xsd:string" />
-			<xsd:element name="lastName" type="xsd:string" />
-			<xsd:element name="emailAddress" type="xsd:string" />
-		</xsd:sequence>
-	</xsd:complexType>
+	<xsd:element name="persons">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element ref="person" minOccurs="0" maxOccurs="unbounded" />
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+
+	<xsd:element name="person">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element name="id" type="xsd:int" />
+				<xsd:element name="firstName" type="xsd:string" />
+				<xsd:element name="lastName" type="xsd:string" />
+				<xsd:element name="emailAddress" type="xsd:string" />
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
 
 </xsd:schema>

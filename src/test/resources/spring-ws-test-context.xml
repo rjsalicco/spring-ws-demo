@@ -22,6 +22,15 @@
 	  <sws:xsd location="classpath:/person.xsd"/>                                                  
 	</sws:dynamic-wsdl>
 
+	<sws:interceptors>
+		<bean id="validatingInterceptor" class="org.springframework.ws.soap.server.endpoint.interceptor.PayloadValidatingInterceptor">
+    		<property name="schema" value="classpath:/person.xsd"/>
+    		<property name="validateRequest" value="true"/>
+    		<property name="validateResponse" value="true"/>
+		</bean>
+		<bean id="personInterceptor" class="com.axiomaticit.interceptor.PersonInterceptor" />
+	</sws:interceptors>
+
 	<bean class="org.springframework.ws.soap.addressing.server.AnnotationActionEndpointMapping" />
 
 	<bean class="org.springframework.ws.server.endpoint.adapter.MarshallingMethodEndpointAdapter">

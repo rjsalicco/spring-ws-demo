@@ -8,6 +8,8 @@
 
 package com.axiomaticit.model;
 
+import java.util.ArrayList;
+import java.util.List;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
@@ -25,7 +27,7 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element ref="{http://www.axiomaticit.com/model}persons"/>
+ *         &lt;element ref="{http://www.axiomaticit.com/model}person" maxOccurs="unbounded" minOccurs="0"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -36,36 +38,41 @@ import javax.xml.bind.annotation.XmlType;
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "", propOrder = {
-    "persons"
+    "person"
 })
-@XmlRootElement(name = "findPersonsResponse")
-public class FindPersonsResponse {
+@XmlRootElement(name = "persons")
+public class Persons {
 
-    @XmlElement(namespace = "http://www.axiomaticit.com/model", required = true)
-    protected Persons persons;
-
-    /**
-     * Gets the value of the persons property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link Persons }
-     *     
-     */
-    public Persons getPersons() {
-        return persons;
-    }
+    @XmlElement(namespace = "http://www.axiomaticit.com/model")
+    protected List<Person> person;
 
     /**
-     * Sets the value of the persons property.
+     * Gets the value of the person property.
      * 
-     * @param value
-     *     allowed object is
-     *     {@link Persons }
-     *     
+     * <p>
+     * This accessor method returns a reference to the live list,
+     * not a snapshot. Therefore any modification you make to the
+     * returned list will be present inside the JAXB object.
+     * This is why there is not a <CODE>set</CODE> method for the person property.
+     * 
+     * <p>
+     * For example, to add a new item, do as follows:
+     * <pre>
+     *    getPerson().add(newItem);
+     * </pre>
+     * 
+     * 
+     * <p>
+     * Objects of the following type(s) are allowed in the list
+     * {@link Person }
+     * 
+     * 
      */
-    public void setPersons(Persons value) {
-        this.persons = value;
+    public List<Person> getPerson() {
+        if (person == null) {
+            person = new ArrayList<Person>();
+        }
+        return this.person;
     }
 
 }

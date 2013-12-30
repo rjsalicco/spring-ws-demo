@@ -11,7 +11,7 @@ public class PersonInterceptor implements EndpointInterceptor {
 	private static final Logger LOGGER = Logger.getLogger(PersonInterceptor.class.getName());
 	
 	public void afterCompletion(MessageContext arg0, Object arg1, Exception arg2) throws Exception {
-		LOGGER.log(Level.INFO, ">>> It's Alive! <<<");
+		LOGGER.log(Level.INFO, ">>> Person Interceptor! <<<");
 	}
 
 	public boolean handleFault(MessageContext arg0, Object arg1) throws Exception {

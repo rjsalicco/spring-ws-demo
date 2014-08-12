@@ -1,5 +1,7 @@
 package com.axiomaticit.service;
 
+import static org.junit.Assert.*;
+
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
@@ -15,6 +17,6 @@ public class PersonServiceTest extends AbstractJUnit4SpringContextTests {
 	
 	@Test
 	public void testFindPersons() {
-		personService.findPersons("test");
+		assertNotNull(personService.findPersons("test"));
 	}
 }

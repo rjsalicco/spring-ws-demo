@@ -1,7 +1,7 @@
 ##spring-ws-demo
 A simple demo of a Web service built using Spring WS.
 
-####Getting Starting
+####Getting Started
 
 1) Run the application using Maven with: mvn jetty:run
 

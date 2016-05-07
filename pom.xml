@@ -29,6 +29,7 @@
 	</build>
 	
 	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<springframework.version>4.2.5.RELEASE</springframework.version>
 		<springframework.ws.version>2.3.0.RELEASE</springframework.ws.version>
 	</properties>

@@ -3,7 +3,7 @@ A simple demo of a Web service built using Spring WS.
 
 ####Getting Started
 
-1) Run the application using Maven with: mvn jetty:run
+1) Run the demo application using Maven with: mvn jetty:run
 
 2) Browse to the following URL to see the dynamic WSDL: http://localhost:8080/spring-ws-demo/person.wsdl
 
